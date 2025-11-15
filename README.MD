@@ -98,7 +98,7 @@ print("Read successful:", [hex(b) for b in data])
 # Output: Read successful: ['0x44', '0x0', '0x0', '0x1', '0x1', '0x1', '0x0']
 ```
 
-🎉 It works!
+Cool...It works
 
 ## Complete Working Code
 
@@ -245,12 +245,11 @@ Note: Clone modules may have less accurate temperature readings.
 Getting a clone DS3231 working with the Pico required some patience and troubleshooting, but the solution was simple: slow down the I2C bus and add a small initialization delay. These modules are perfect for projects that need timekeeping, and at a fraction of the cost of genuine modules.
 
 The key takeaways:
-- ✅ Use 100kHz I2C frequency for reliability
-- ✅ Add `time.sleep(0.1)` after I2C initialization
-- ✅ Battery is optional if your project stays powered
-- ✅ Clone modules work great once configured properly
-
-Happy making! 🕐
+- Use 100kHz I2C frequency for reliability
+- Add `time.sleep(0.1)` after I2C initialization
+- I removed my suspect cr2302 just since I didn't need it right now.
+- Battery is optional if your project stays powered
+- Clone modules can work great once configured properly
 
 ## License
 
