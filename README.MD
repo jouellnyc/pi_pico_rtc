@@ -1,4 +1,3 @@
-
 # Using a DS3231 RTC with Raspberry Pi Pico: A Troubleshooting Journey
 
 ## Introduction
@@ -62,7 +61,7 @@ Output:
 Devices found: ['0x57', '0x5f', '0x68']
 ```
 
-Success! The device at `0x68` is our DS3231. The other addresses (`0x57` and `0x5F`) are the EEPROM chips commonly found on DS3231 modules.
+Success! The device at `0x68` is our DS3231. The other addresses (`0x57` and `0x5F`) are other I2C devices on the same bus (in this case, temperature/humidity sensors - TMP117 and SHTC3).
 
 ### Step 3: Still Can't Read or Write
 
@@ -254,6 +253,5 @@ Happy making! 🕐
 ## License
 
 This guide is released under MIT License - feel free to use and modify for your projects!
-
 
 
