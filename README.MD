@@ -61,7 +61,9 @@ Output:
 Devices found: ['0x57', '0x5f', '0x68']
 ```
 
-Success! The device at `0x68` is our DS3231. The other addresses (`0x57` and `0x5F`) are other I2C devices on the same bus (in this case, temperature/humidity sensors - TMP117 and SHTC3).
+Success! The device at `0x68` is our DS3231. The other addresses (`0x57` and `0x5F`) are the AT24C32 EEPROM chips included on many DS3231 modules for data logging.
+
+**Note:** In this setup, we had other I2C devices (TMP117 and SHTC3 temperature sensors, plus an OLED) on different GPIO pins (GP0/GP1), so they didn't appear in this scan. The Pico allows multiple pin pairs for the same I2C peripheral.
 
 ### Step 3: Still Can't Read or Write
 
