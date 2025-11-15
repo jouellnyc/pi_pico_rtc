@@ -4,10 +4,17 @@
 
 The Raspberry Pi Pico doesn't have a built-in Real-Time Clock (RTC) with battery backup, which means it loses track of time whenever it's powered off. Enter the DS3231 RTC module - a popular solution that keeps time running even when your project is unplugged. This guide walks through setting up a DS3231 (including the quirky clone modules) with the Pico using MicroPython.
 
+## BTW
+I added this to my oled and Adafruit sensor setup:
+![Setup](setup.png)
+
+
 ## Hardware Requirements
 
 - Raspberry Pi Pico
 - DS3231 RTC Module (genuine or clone)
+  Voila:
+![RTC](ds_rtc.png)
 - 4 jumper wires
 - CR2032 battery (optional - only needed for timekeeping when powered off)
 
