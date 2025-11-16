@@ -218,10 +218,9 @@ If `i2c.scan()` returns an empty list:
 
 ### Time Resets After Power Cycle
 
-This is normal without a battery! Either:
+This is normal without a battery!
 - Install a CR2032 battery
-- Set the time programmatically on each boot
-- Store the last known time and restore it on startup
+- Store the last known time and restore it on startup (but just for fun...obviously)
 
 ## Multiple I2C Devices
 
