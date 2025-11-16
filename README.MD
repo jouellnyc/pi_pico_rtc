@@ -260,8 +260,3 @@ The key takeaways:
 - Battery is optional if your project stays powered
 - Clone modules can work great once configured properly
 
-## License
-
-This guide is released under MIT License - feel free to use and modify for your projects!
-
-
