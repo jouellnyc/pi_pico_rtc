@@ -7,6 +7,7 @@ The Raspberry Pi Pico doesn't have a built-in Real-Time Clock (RTC) with battery
 ## BTW
 I added this to my oled and Adafruit sensor setup:
 ![Setup](setup.png)
+It was a rainy day and I finally got a round to doing this.
 
 
 ## Hardware Requirements
@@ -250,6 +251,7 @@ Note: Clone modules may have less accurate temperature readings.
 ## Conclusion
 
 Getting a clone DS3231 working with the Pico required some patience and troubleshooting, but the solution was simple: slow down the I2C bus and add a small initialization delay. These modules are perfect for projects that need timekeeping, and at a fraction of the cost of genuine modules.
+NOTE: I used Claude AI - I had never used these modules and I did not really get the best hits from google/youtube for some reason.
 
 The key takeaways:
 - Use 100kHz I2C frequency for reliability
