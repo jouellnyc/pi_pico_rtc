@@ -194,7 +194,7 @@ set_time(2025, 11, 15, 18, 45, 0)  # Adjust to current time
 Clone DS3231 modules work fine but may require:
 - Slower I2C speeds (100kHz instead of 400kHz)
 - The initialization delay (`time.sleep(0.1)`)
-- Less accurate timekeeping (genuine modules are ±2ppm or ~1 minute/year)
+- Less accurate timekeeping (genuine modules are ±2ppm or ~1 minute/year) (Says Claude.ai!)
 
 ## Troubleshooting
 
@@ -214,7 +214,6 @@ If `i2c.scan()` returns an empty list:
 1. Double-check all wire connections
 2. Verify you're using the correct GPIO pins
 3. Try the other I2C bus: `I2C(1, ...)` instead of `I2C(0, ...)`
-4. Check if your module needs pull-up resistors (most have them built-in)
 
 ### Time Resets After Power Cycle
 
