@@ -295,7 +295,7 @@ NOTE: I used Claude AI - I had never used these modules and I did not really get
 The key takeaways:
 - Use 100kHz I2C frequency for reliability
 - Add `time.sleep(0.1)` after I2C initialization
-- I removed my suspect cr2302 just since I didn't need it right now.
+- Test your circuit for safety!
 - Battery is optional if your project stays powered
 - Clone modules can work great once configured properly
 
