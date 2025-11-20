@@ -244,10 +244,7 @@ temp = read_temperature()
 print(f"Temperature: {temp}°C")
 ```
 
-Note: Clone modules may have less accurate temperature readings.
-## Safety
-#
-#  Backup Power Safety: CR2032 Hazard Mitigation
+##  Backup Power Safety: CR2032 Hazard Mitigation
 
 The DS3231 RTC module includes an on-board charging circuit that presents a safety hazard if used with standard, non-rechargeable **CR2032** coin cells.
 
