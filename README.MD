@@ -245,6 +245,49 @@ print(f"Temperature: {temp}°C")
 ```
 
 Note: Clone modules may have less accurate temperature readings.
+## Safety
+#
+#  Backup Power Safety: CR2032 Hazard Mitigation
+
+The DS3231 RTC module includes an on-board charging circuit that presents a safety hazard if used with standard, non-rechargeable **CR2032** coin cells.
+
+## The Hazard 🚨
+
+Most DS3231 modules are designed to provide a trickle charge to a **rechargeable LIR2032** cell whenever the main 5V power is connected.
+
+If a primary (non-rechargeable) **CR2032** is installed, the continuous charging current can cause the cell to **swell, leak, overheat, or rupture**, posing a fire and chemical risk.
+
+see https://lastminuteengineers.com/ds3231-rtc-arduino-tutorial/
+
+
+## Safety Testing and Verification
+
+To ensure the safety of the circuit, a test was performed to verify the exact charging voltage the module outputs onto the battery terminals when powered by 5V.
+
+### **The Multimeter Test Procedure**
+
+1.  **Remove** the battery from the holder.
+2.  **Power up** the module (connect VCC to 5V and GND to GND).
+3.  Set your multimeter to **DC Voltage**.
+4.  Place the Red probe on the **positive clip** of the empty battery holder.
+5.  Place the Black probe on the **GND** pin of the module.
+
+| Test Condition | Expected "Danger" Result | **Actual Result** | Interpretation |
+| :--- | :--- | :--- | :--- |
+| Voltage measured on empty battery terminals | $\sim5.0V$ (Raw VCC) | **$\sim3.0V$** | **SAFE.** The module uses an internal regulator to limit the voltage, protecting the cell from raw VCC. |
+
+## Solution: Using the LIR2032 Rechargeable Cell 🔋
+
+The 3.0V measured output confirmed that the module is designed for charge maintenance.
+
+To eliminate the hazard without modifying the hardware, the correct solution is to use the rechargeable counterpart: the **LIR2032 Lithium-Ion cell.**
+
+* **Safety:** The LIR2032 is chemically designed to accept the continuous charging current provided by the module.
+* **Module Compatibility:** The V_BAT pin of the DS3231 chip safely tolerates the LIR2032's maximum voltage of **4.2V**.
+ The module's $3.0V$ output ensures the LIR2032 is maintained at a safe, stable charge level.
+
+So using an **LIR2032** battery ensures the integrity of the RTC backup system and prevents the hazards associated with charging a primary CR2032 cell.
+
 
 ## Conclusion
 
